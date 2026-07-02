@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TaskFlow Pro</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- ================= Sidebar ================= -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <i class="fa-solid fa-list-check"></i>
+            <h2>TaskFlow</h2>
+        </div>
+
+        <button id="newTaskBtn">
+            <i class="fa-solid fa-plus"></i>
+            New Task
+        </button>
+
+        <div class="menu">
+
+            <button class="filter active" data-filter="all">
+                <i class="fa-solid fa-layer-group"></i>
+                All Tasks
+            </button>
+
+            <button class="filter" data-filter="pending">
+                <i class="fa-solid fa-hourglass-half"></i>
+                Pending
+            </button>
+
+            <button class="filter" data-filter="completed">
+                <i class="fa-solid fa-circle-check"></i>
+                Completed
+            </button>
+
+            <button class="filter" data-filter="high">
+                🔴 High Priority
+            </button>
+
+            <button class="filter" data-filter="medium">
+                🟡 Medium Priority
+            </button>
+
+            <button class="filter" data-filter="low">
+                🟢 Low Priority
+            </button>
+
+        </div>
+
+    </aside>
+
+    <!-- ================= Main ================= -->
+
+    <main class="main">
+
+        <header>
+
+            <h1>
+                Dashboard
+            </h1>
+
+            <div class="header-right">
+
+                <input
+                    type="text"
+                    id="search"
+                    placeholder="Search tasks...">
+
+                <button id="darkMode">
+                    🌙
+                </button>
+
+            </div>
+
+        </header>
+
+        <!-- ================= Statistics ================= -->
+
+        <section class="stats">
+
+            <div class="card">
+
+                <h3>Total</h3>
+
+                <span id="totalTasks">
+                    0
+                </span>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Completed</h3>
+
+                <span id="completedTasks">
+                    0
+                </span>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Pending</h3>
+
+                <span id="pendingTasks">
+                    0
+                </span>
+
+            </div>
+
+        </section>
+
+        <!-- ================= Task List ================= -->
+
+        <section
+            class="task-container"
+            id="taskContainer">
+
+            <!-- JS will generate task cards -->
+
+        </section>
+
+    </main>
+
+    <!-- ================= Modal ================= -->
+
+    <div
+        class="modal"
+        id="taskModal">
+
+        <div class="modal-content">
+
+            <span
+                class="close"
+                id="closeModal">
+                &times;
+            </span>
+
+            <h2>Add New Task</h2>
+
+            <form id="taskForm">
+
+                <input
+                    type="text"
+                    id="taskTitle"
+                    placeholder="Task Title"
+                    required>
+
+                <textarea
+                    id="taskDescription"
+                    placeholder="Description"></textarea>
+
+                <select id="taskPriority">
+
+                    <option value="High">
+                        🔴 High
+                    </option>
+
+                    <option value="Medium">
+                        🟡 Medium
+                    </option>
+
+                    <option value="Low">
+                        🟢 Low
+                    </option>
+
+                </select>
+
+                <input
+                    type="date"
+                    id="taskDate">
+
+                <button type="submit">
+
+                    <i class="fa-solid fa-floppy-disk"></i>
+
+                    Save Task
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <!-- ================= Footer ================= -->
+
+    <footer>
+
+        Developed by
+        <strong>AK BRANDS</strong>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
